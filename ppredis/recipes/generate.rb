@@ -1,6 +1,6 @@
 node[:deploy].each do |appname, deployconfig|
   # determine root folder of new app deployment
-  approot = "#{deployconfig[:deployto]}/current"
+  approot = "#{deployconfig[:deploy_to]}/current"
 
   # use template .redis.json.erb. to generate 'config/redis.json'
   template "#{approot}/config/redis.json" do
