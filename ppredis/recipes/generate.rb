@@ -12,9 +12,9 @@ node[:deploy].each do |appname, deployconfig|
     group deployconfig[:group]
     owner deployconfig[:user]
 
-    # only generate a file if there is Redis configuration
-    # notif do
-    #   deploy_config[:redis].blank?
-    # end
+    # only generate if it's a valid nodejs app
+    only_if do
+       deployconfig[:application_type] == 'nodejs'
+    end
   end
 end

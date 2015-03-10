@@ -12,5 +12,10 @@ node[:deploy].each do |appname, deployconfig|
     group deployconfig[:group]
     owner deployconfig[:user]
 
+    # only generate if its a valid nodejs app
+    only_if do
+       deployconfig[:application_type] == 'nodejs'
+    end
+
   end
 end
