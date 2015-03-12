@@ -3,7 +3,7 @@ node[:deploy].each do |appname, deployconfig|
   approot = "#{deployconfig[:deploy_to]}/current"
 
   # use template .redis.json.erb. to generate 'config/redis.json'
-  template "#{approot}/config/wit.json" do
+  template "#{approot}/shared/config/wit.json" do
     source "wit.json.erb"
     cookbook "ppwit"
 

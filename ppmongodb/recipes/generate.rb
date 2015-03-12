@@ -3,7 +3,7 @@ node[:deploy].each do |appname, deployconfig|
   approot = "#{deployconfig[:deploy_to]}/current"
 
   # use template .redis.json.erb. to generate 'config/redis.json'
-  template "#{approot}/config/mongo.json" do
+  template "#{approot}/shared/config/mongo.json" do
     source "mongo.json.erb"
     cookbook "ppmongodb"
 
