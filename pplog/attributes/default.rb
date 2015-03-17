@@ -1,0 +1,1 @@
+default[:cwlogs][:logfile] = '/var/log/aws/opsworks/app.log'

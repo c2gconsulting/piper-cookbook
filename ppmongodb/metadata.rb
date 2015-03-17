@@ -1,4 +1,4 @@
-name        "mongodb-singlenode"
+name        "ppmongodb"
 description 'MongoDB single node Berkshelf based install'
 maintainer  "Piper Labs"
 license     "Apache 2.0"
