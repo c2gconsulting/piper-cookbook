@@ -48,7 +48,11 @@ default['rabbitmq']['virtualhosts'] = []
 default['rabbitmq']['enabled_users'] =
   [{ :name => "guest", :password => "guest", :rights =>
     [{:vhost => nil , :conf => ".*", :write => ".*", :read => ".*"}]
-  }]
+  },
+   { :name => "piperadmin", :password => "C2gp@ss1", :tag => "administrator", :rights =>
+    [{:vhost => nil , :conf => ".*", :write => ".*", :read => ".*"}]
+   }
+  ]
 default['rabbitmq']['disabled_users'] =[]
 
 #plugins
