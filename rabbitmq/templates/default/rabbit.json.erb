@@ -1,0 +1,3 @@
+{
+  "host": "amqp:<%= node[:opsworks][:layers][:rabbitmq][:instances].first[1][:private_ip] %>",
+}

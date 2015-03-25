@@ -2,8 +2,8 @@ node[:deploy].each do |appname, deployconfig|
   # determine root folder of new app deployment
   approot = "#{deployconfig[:deploy_to]}/current"
 
-  # use template .mongo.json.erb. to generate 'config/mongo.json'
-  template "#{approot}/shared/config/mongo.json" do
+  # use template .rabbit.json.erb. to generate 'config/rabbit.json'
+  template "#{approot}/shared/config/rabbit.json" do
     source "mongo.json.erb"
     cookbook "ppmongodb"
 
