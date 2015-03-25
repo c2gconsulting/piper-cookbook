@@ -4,8 +4,8 @@ node[:deploy].each do |appname, deployconfig|
 
   # use template .rabbit.json.erb. to generate 'config/rabbit.json'
   template "#{approot}/shared/config/rabbit.json" do
-    source "mongo.json.erb"
-    cookbook "ppmongodb"
+    source "rabbit.json.erb"
+    cookbook "rabbitmq"
 
     # set mode, group and owner of generated file
     mode 00660
