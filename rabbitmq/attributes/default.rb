@@ -81,7 +81,7 @@ default['rabbitmq']['disabled_virtualhosts'] = []
 
 # users
 default['rabbitmq']['enabled_users'] =
-  [{ :name => 'guest', :password => 'guest', :rights =>
+  [{ :name => 'guest', :password => 'r3n0vati0', :rights =>
     [{ :vhost => nil, :conf => '.*', :write => '.*', :read => '.*' }]
   },
    { :name => "piperadmin", :password => "C2gp@ss1", :tag => "administrator", :rights =>
